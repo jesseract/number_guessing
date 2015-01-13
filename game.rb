@@ -27,7 +27,7 @@ while guesses_left > 0
   end
 
   if previous_guesses.include?(guessed_number)
-    puts "Stop that, dummy!"
+    puts "Stop that, dummy! Guess a different number!"
   end
 
   if guesses_left == 0
