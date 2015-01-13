@@ -11,12 +11,18 @@ previous_guesses = []
 
 target_number = computer_guess
 
+puts target_number
 puts "Shall we play a game? Guess the number between 1 and 100. You get five tries."
 
 guesses_left = 5
 while guesses_left > 0
   guesses_left = guesses_left - 1
   guessed_number = ask_for_number
+
+  if target_number == guessed_number
+    puts "You guessed it!"
+    break
+  end
 
   if target_number < guessed_number && guesses_left > 0
     puts "Too high, try again!:"
