@@ -1,5 +1,5 @@
 def choose_random_number
-  return rand(100) + 1
+  return (1..100).to_a.sample
 end
 
 def ask_for_number
