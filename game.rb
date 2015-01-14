@@ -1,5 +1,5 @@
-def computer_guess
-  return rand(100)+1
+def choose_random_number
+  return rand(100) + 1
 end
 
 def ask_for_number
@@ -9,7 +9,7 @@ end
 
 previous_guesses = []
 
-target_number = computer_guess
+target_number = choose_random_number
 
 puts target_number
 puts "Shall we play a game? Guess the number between 1 and 100. You get five tries."
@@ -22,18 +22,14 @@ while guesses_left > 0
   if target_number == guessed_number
     puts "You guessed it!"
     break
-  end
-
-  if target_number < guessed_number && guesses_left > 0
+  elsif target_number < guessed_number && guesses_left > 0
     puts "Too high, try again!:"
-  end
-
-  if target_number > guessed_number && guesses_left > 0
+  elsif target_number > guessed_number && guesses_left > 0
     puts "Too low, try again!:"
   end
 
   if previous_guesses.include?(guessed_number)
-    puts "Stop that, dummy!"
+    puts "Stop that, dummy! Guess a different number!"
   end
 
   if guesses_left == 0
@@ -43,4 +39,3 @@ while guesses_left > 0
   previous_guesses << guessed_number
 
 end
-#comment
